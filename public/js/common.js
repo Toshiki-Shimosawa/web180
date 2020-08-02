@@ -1,5 +1,14 @@
-$('.slick01').slick({
-    　　  autoplay:true,
-    autoplaySpeed:5000,
-    dots:true,
-    　});
+    $(document).on('ready',function(){
+
+        $('.slick01').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        slidesToShow:3
+      });
+
+
+    })　;
+    
+  
+
+    
