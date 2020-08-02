@@ -7,7 +7,8 @@
     <link href="{{ asset('sass/app.scss') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{asset('css/slick.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('css/common.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/slick-theme.css')}}"/>
+     <link rel="stylesheet" type="text/css" href="{{asset('css/common.css')}}"/>
     
 </head>
 <body>
@@ -33,13 +34,11 @@
         <li class="slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 920px;"><img src="{{asset('image/slider01.jpeg')}}" alt="slider01"></li>
         <li class="slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02" style="width: 920px;"><img src="{{asset('image/slider02.jpeg')}}" alt="slider01"></li>
         <li class="slick-slide slick-current slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide03" aria-describedby="slick-slide-control03" style="width: 920px;"><img src="{{asset('image/slider03.jpeg')}}"></li>
-        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
-        <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>
- 
     </ul>
 
 
     {{--SlickSlider-end--}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('js/slick.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/common.js')}}"></script>
 </body>
