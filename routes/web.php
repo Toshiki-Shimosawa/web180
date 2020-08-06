@@ -20,4 +20,12 @@ Route::get('/', function () {
 Route::get('/index/', function () {
     return view('index');
 });
+Route::get('/sns/', function () {
+    return view('sns');
+});
 
+Route::get('/menu/','MenuController@index');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();

@@ -1,0 +1,28 @@
+.slick-slide img{
+    height: 30vw;
+    width: 50vw;
+
+}
+#service .copy{
+    background-color:rgb(0, 165, 189);
+    text-align: center;
+    color: #ffffff;
+    height: 150px;
+    
+}
+                                                                                                                                                  
+#service .copy h2,p{
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+#service .copy:after{
+    content: "";
+    position: absolute;
+    bottom: 215px;
+    left: 50%;
+    border: 30px solid transparent;
+    border-top: 30px solid rgb(0, 165, 189);
+    z-index: 1;
+}
