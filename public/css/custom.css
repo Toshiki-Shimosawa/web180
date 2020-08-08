@@ -3,6 +3,27 @@
     width: 50vw;
 
 }
+
+.abc{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.menu{
+    margin: 20px 5px 5px 5px;
+}
+
+.menu dt img{
+    width: 20vw;
+    height: 20vw;
+}
+
+.menu dd{
+    font-size: 2vw;
+}
+
 #service .copy{
     background-color:rgb(0, 165, 189);
     text-align: center;
@@ -26,3 +47,4 @@
     border-top: 30px solid rgb(0, 165, 189);
     z-index: 1;
 }
+

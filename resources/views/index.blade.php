@@ -5,7 +5,7 @@
 @section('stylesheet')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="{{asset('/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/custom.css')}}">
+    
 @endsection
     
 @section('content')
@@ -28,10 +28,7 @@
     </div>
 </div>
 {{--service-end--}}
-<form action="{{url('/logout')}}" method="POST">
-    <input type="submit" name="submit" value="ログアウト">
 
-</form>
 @endsection
 @section('script')
     

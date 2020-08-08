@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="{{asset('/css/custom.css')}}">
     @yield('stylesheet')
 
     
@@ -19,11 +19,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{url('/index')}}">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="{{url('/menu')}}">MENU</a>
-            <a class="nav-item nav-link" href="{{url('/sns')}}">SNS</a>
+            <a id="nav" class="nav-item nav-link" href="{{url('/index')}}">Home <span class="sr-only">(current)</span></a>
+            <a id="nav" class="nav-item nav-link" href="{{url('/menu')}}">MENU</a>
+            <a id="nav" class="nav-item nav-link" href="{{url('/sns')}}">SNS</a>
             @if(Auth::check())
-              <a class="nav-item nav-link" href="{{url('/logout')}}">LOGOUT</a>
+              <a class="nav-item nav-link" onclick="document.querySelector('#logout-form').submit()">LOGOUT</a>
+              <form action="{{url('logout')}}" method="POST" id='logout-form'>
+                @csrf
+              </form>
               
             @else
               <a class="nav-item nav-link" href="{{url('/login')}}">LOGIN</a>
@@ -43,6 +46,10 @@
     <!--script-->
    
     @yield('script')
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
     <!--script-end-->
 </body>
 </html>
