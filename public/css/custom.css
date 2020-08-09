@@ -38,13 +38,4 @@
     padding-top: 20px;
 }
 
-#service .copy:after{
-    content: "";
-    position: absolute;
-    bottom: 215px;
-    left: 50%;
-    border: 30px solid transparent;
-    border-top: 30px solid rgb(0, 165, 189);
-    z-index: 1;
-}
 
