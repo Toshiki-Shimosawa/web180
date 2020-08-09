@@ -5,19 +5,19 @@
 @section('content')
 <!--selectMenu-->
 　<div class="btn-group btn-group-toggle" data-toggle="buttons"> 
-    <label id="radio" class="btn btn-info active">
+    <label id="allMenus" class="btn btn-info active">
       <input type="radio" name="options" id="option1 radio" autocomplete="off" checked>ALL
     </label>
-    <label id="radio" class="btn btn-info">
+    <label id="drinks" class="btn btn-info">
       <input type="radio" name="options" id="option2 radio" autocomplete="off">DRINK
     </label>
-    <label id="radio" class="btn btn-info">
+    <label id="foods" class="btn btn-info">
         <input type="radio" name="options" id="option3 raido" autocomplete="off">FOOD
       </label>
   </div>
   <!--selectMenu-end-->
     <div class='abc'>
-        @foreach ($items as $item)
+        @foreach ($allItems as $item)
             <div class='menu'>
                 <dt><img src="{{asset('image/'.$item->image_path)}}"></dt>
                 <dd>{{$item->name}}</dd>
@@ -30,9 +30,8 @@
 
 @section('script')
 <script>      
-    window.onload = function(){
-     var navcolor = document.getElementById("nav");
-     navcolor.classList.add("active");
-    });
+     document.querySelector(".nav2").classList.add('active');
  </script>
+
 @endsection
+

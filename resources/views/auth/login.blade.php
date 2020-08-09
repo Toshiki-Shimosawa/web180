@@ -71,3 +71,9 @@
     </div>
 </div>
 @endsection
+
+@section('script')
+    <script>
+        document.querySelector('.nav4').classList.add('active');
+    </script>
+@endsection

@@ -19,17 +19,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a id="nav" class="nav-item nav-link" href="{{url('/index')}}">Home <span class="sr-only">(current)</span></a>
-            <a id="nav" class="nav-item nav-link" href="{{url('/menu')}}">MENU</a>
-            <a id="nav" class="nav-item nav-link" href="{{url('/sns')}}">SNS</a>
+            <a class="nav1 nav-item nav-link" href="{{url('/index')}}">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav2 nav-item nav-link" href="{{url('/menu')}}">MENU</a>
+            <a class="nav3 nav-item nav-link" href="{{url('/sns')}}">SNS</a>
             @if(Auth::check())
-              <a class="nav-item nav-link" onclick="document.querySelector('#logout-form').submit()">LOGOUT</a>
+              <a class="nav4 nav-item nav-link" onclick="document.querySelector('#logout-form').submit()">LOGOUT</a>
               <form action="{{url('logout')}}" method="POST" id='logout-form'>
                 @csrf
               </form>
               
             @else
-              <a class="nav-item nav-link" href="{{url('/login')}}">LOGIN</a>
+              <a class="nav4 nav-item nav-link" href="{{url('/login')}}">LOGIN</a>
             @endif
 
           <a href="{{url('/')}}"></a>

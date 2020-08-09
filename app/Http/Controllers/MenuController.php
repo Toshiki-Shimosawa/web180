@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Menu;
+use App\Item;
 
 
 class MenuController extends Controller
 {
     function index(){
-        $items = Menu::all();
-        return view('menu',['items' => $items]);
-
+        $allItems = Item::all();
+        $drinks = Item::where('menu_type','drink')->get();
+        $foods = Item::where('menu_type','food')->get();
+        return view('menu',['allItems' => $allItems, 'drinks'=>$drinks, 'foods'=>$foods]);
     }
     
 }

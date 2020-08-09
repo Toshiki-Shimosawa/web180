@@ -11,3 +11,9 @@
     @endif
 
 @endsection
+
+@section('script')
+    <script>
+        document.querySelector('.nav3').classList.add('active');
+    </script>
+@endsection
