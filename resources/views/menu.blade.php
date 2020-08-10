@@ -35,7 +35,7 @@
         $('.menu').show()
     });
 
-    $('labelCheck').on('click', function() {
+    $('.labelCheck').on('click', function() {
         const id = $(this).attr('id').slice(0,-1);
         $(`.menu.${id}`).show()
         $(`.menu:not(.${id})`).hide()
